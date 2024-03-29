@@ -16,14 +16,14 @@ config({
 })
 
 // Middleware : for sending json data from the POSTMAN 
+app.use( "/api/v1/users" , userRouter);
+app.use( "/api/v1/task" , taskRouter);
 app.use(express.json());
 app.use(cookieParser());
-app.use( "/api/v1/users" ,userRouter);
-app.use( "/api/v1/task" ,taskRouter);
 app.use(errorMiddleware);
 app.use(cors({
     origin: [process.env.FRONTEND_URL],
-    methods: ["GET" , "POST" , "PUT" , "POST"],
+    methods: ["GET" , "POST" , "PUT" , "DELETE"], 
     credentials: true,
 }))
 
