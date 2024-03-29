@@ -1,0 +1,8 @@
+Now here is the Step Three which can be combined with all the steps : 
+
+npm i dotenv
+
+
+now for the Dpolyment we need to install cors tu get request from the different ports
+
+npm i cors
